@@ -6,7 +6,7 @@ import Footer from './containers/Shared/Footer/Footer';
 import Header from './containers/Shared/Header/Header';
 function App() {
   return (
-    <div>
+    <div className='bg-success'>
       <Header></Header>
       <Routes>
         <Route path='/home' element={<Home></Home>}></Route>

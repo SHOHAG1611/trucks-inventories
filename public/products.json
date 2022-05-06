@@ -7,8 +7,8 @@
     {"_id":6,"name":"six","img":"https://vini.gm.com/realimages/1GC4WLE76NF281796/59ec372.jpg","price":"$17000","quantity":1,"sName":"David Warner","body":"Lorem,   Itaque architecto voluptates voluptatem qui ea commodi nihil? Error, exercitationem blanditiis?"},
     {"_id":7,"name":"seven","img":" ","price":"$13000","quantity":1,"sName":"David Warner","body":"Lorem,   Itaque architecto voluptates voluptatem qui ea commodi nihil? Error, exercitationem blanditiis?"},
     {"_id":8,"name":"eight","img":"https://inv.assets.sincrod.com/0/1/7/29739575710.jpg","price":"$12000","quantity":1,"sName":"David Warner","body":"Lorem,   Itaque architecto voluptates voluptatem qui ea commodi nihil? Error, exercitationem blanditiis?"},
-    {"_id":9,"name":"nine","img":" ","price":"$17000","quantity":1,"sName":"David Warner","body":"Lorem,   Itaque architecto voluptates voluptatem qui ea commodi nihil? Error, exercitationem blanditiis?"},
-    {"_id":10,"name":"ten","img":" ","price":"$13000","quantity":1,"sName":"David Warner","body":"Lorem,   Itaque architecto voluptates voluptatem qui ea commodi nihil? Error, exercitationem blanditiis?"},
-    {"_id":11,"name":"eleven","img":" ","price":"$18000","quantity":1,"sName":"David Warner","body":"Lorem,   Itaque architecto voluptates voluptatem qui ea commodi nihil? Error, exercitationem blanditiis?"},
-    {"_id":12,"name":"twelve","img":" ","price":"$11000","quantity":1,"sName":"David Warner","body":"Lorem,   Itaque architecto voluptates voluptatem qui ea commodi nihil? Error, exercitationem blanditiis?"}
+    {"_id":9,"name":"nine","img":"","price":"$17000","quantity":1,"sName":"David Warner","body":"Lorem,   Itaque architecto voluptates voluptatem qui ea commodi nihil? Error, exercitationem blanditiis?"},
+    {"_id":10,"name":"ten","img":"","price":"$13000","quantity":1,"sName":"David Warner","body":"Lorem,   Itaque architecto voluptates voluptatem qui ea commodi nihil? Error, exercitationem blanditiis?"},
+    {"_id":11,"name":"eleven","img":"","price":"$18000","quantity":1,"sName":"David Warner","body":"Lorem,   Itaque architecto voluptates voluptatem qui ea commodi nihil? Error, exercitationem blanditiis?"},
+    {"_id":12,"name":"twelve","img":"","price":"$11000","quantity":1,"sName":"David Warner","body":"Lorem,   Itaque architecto voluptates voluptatem qui ea commodi nihil? Error, exercitationem blanditiis?"}
 ]
