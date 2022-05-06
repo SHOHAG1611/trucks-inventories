@@ -1,6 +1,16 @@
-.header-style{
+.header-style {
     padding: 20px;
 }
-.header-style .link-title{
-    font-size: 20px;
+
+.header-style a {
+    font-size: 30px;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: rgb(51, 216, 161);
+    cursor: pointer;
+}
+
+.header-style a:hover {
+    color: yellow;
 }
