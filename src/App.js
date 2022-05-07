@@ -1,7 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Blogs from './containers/Blogs/Blogs';
+import Details from './containers/Details/Details';
 import Home from './containers/Home/Home/Home';
+import Login from './containers/Login/Login/Login';
+import Register from './containers/Login/Register/Register';
+import ManageInventories from './containers/ManageInventories/ManageInventories';
 import Footer from './containers/Shared/Footer/Footer';
 import Header from './containers/Shared/Header/Header';
 function App() {
@@ -11,7 +15,11 @@ function App() {
       <Routes>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/details' element={<Details></Details>}></Route>
+        <Route path='manageInventories' element={<ManageInventories></ManageInventories>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

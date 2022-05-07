@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './HomeItem.css'
 
 const HomeItem = ({ product }) => {
@@ -15,7 +16,7 @@ const HomeItem = ({ product }) => {
                 <Card.Text>{body}</Card.Text>
                 <Card.Text>{sName}</Card.Text> 
                 </Card.Body>
-                <button className='btn btn-primary'>Update</button>
+                <Link to='/details'><button style={{width:'100%'}} className='btn btn-primary details-btn'>Update</button></Link>
             </Card >
         </div>
     );

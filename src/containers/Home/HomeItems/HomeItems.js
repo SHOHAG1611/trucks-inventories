@@ -9,12 +9,14 @@ const HomeItems = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
-    const homeService=products.slice(0,6)
+    const homeService = products.slice(0, 6)
     return (
-        <div className='trucks-container'>
-            {
-                homeService.map(product=><HomeItem key={product._id} product={product}></HomeItem>)
-            }
+        <div>
+            <div className='trucks-container'>
+                {
+                    homeService.map(product => <HomeItem key={product._id} product={product}></HomeItem>)
+                }
+            </div>
         </div>
     );
 };

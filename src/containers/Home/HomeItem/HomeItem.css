@@ -7,3 +7,6 @@
     border: none;
     border-radius: 10px;
 }
+.single-truck .details-btn:hover{
+    background-color: green;
+}
