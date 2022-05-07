@@ -8,6 +8,7 @@ import Register from './containers/Login/Register/Register';
 import ManageInventories from './containers/ManageInventories/ManageInventories';
 import Footer from './containers/Shared/Footer/Footer';
 import Header from './containers/Shared/Header/Header';
+import PageNotFound from './containers/Shared/PageNotFound/PageNotFound';
 function App() {
   return (
     <div className='bg-success'>
@@ -20,6 +21,7 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

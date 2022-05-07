@@ -1,0 +1,9 @@
+.page-error img {
+    display: flex;
+    width: 500px;
+    height:500px;
+    margin:auto;
+}
+.page-error{
+    margin-top: 20px;
+}

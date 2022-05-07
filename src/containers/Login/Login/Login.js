@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Google from '../Google/Google';
 import './Login.css'
 
 const Login = () => {
@@ -22,9 +23,7 @@ const Login = () => {
                     <div>Or</div>
                     <div>____________________</div>
                 </div>
-                <div>
-                    <button className='btn btn-primary mt-3 google-login'>Continue with Google</button>
-                </div>
+                <Google></Google>
             </form>
         </div>
     );

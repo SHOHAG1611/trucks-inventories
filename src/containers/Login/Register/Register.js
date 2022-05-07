@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Google from '../Google/Google';
 
 const Register = () => {
     return (
@@ -7,7 +8,7 @@ const Register = () => {
             <form style={{
                 backgroundImage: `url("https://css-tricks.com/wp-content/uploads/2018/08/vector.png")`
             }} className='login-form text-center mt-5 mx-auto bg-info'>
-                <input type="text" name="name" placeholder='enter your name'/>
+                <input type="text" name="name" placeholder='enter your name' />
                 <br />
                 <input type="email" name="email" placeholder='Enter Your Email' required />
                 <br />
@@ -21,9 +22,7 @@ const Register = () => {
                     <div>Or</div>
                     <div>____________________</div>
                 </div>
-                <div>
-                    <button className='btn btn-primary mt-3 google-login'>Continue with Google</button>
-                </div>
+                <Google></Google>
             </form>
         </div>
     );
