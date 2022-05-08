@@ -6,12 +6,8 @@ import googleLogo from '../../img/google/google.png'
 
 
 const Google = () => {
-    const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, user] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
-    let errorMassage;
-    if (error) {
-        errorMassage = <p>Error: {error?.message}</p>
-    }
     if (user) {
         navigate('/addItem')
     }
@@ -23,8 +19,10 @@ const Google = () => {
     }
     return (
         <div>
-            <div>
-                {errorMassage}
+            <div className='text-white'>
+                <div>____________________</div>
+                <div>Or</div>
+                <div>____________________</div>
             </div>
             <button onClick={() => signInWithGoogle()} className='btn btn-primary mt-2 mx-auto rounded-pill'>
                 <img style={{ width: '33px' }} src={googleLogo} alt="" />

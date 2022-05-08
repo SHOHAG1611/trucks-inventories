@@ -4,18 +4,21 @@ import { Navigate, useLocation } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 const RequireAuth = ({ children }) => {
-    const [user,loading] = useAuthState(auth);
-    const location=useLocation();
+    const [user, loading] = useAuthState(auth);
+    const location = useLocation();
     // reload problem solved.
-    if(loading){
+    if (loading) {
         return <div>
-            <h1 className='text-center'>Loading......</h1>
+            <h1 className='text-center'><div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                </div>
+            </div></h1>
         </div>
     }
-    if(!user){
+    if (!user) {
         return <Navigate to="/login" state={{ from: location }} replace />;
     }
-      return children;
+    return children;
 };
 
 export default RequireAuth;
