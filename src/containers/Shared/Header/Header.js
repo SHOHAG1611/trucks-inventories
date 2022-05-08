@@ -13,7 +13,7 @@ const Header = () => {
         signOut(auth);
     }
     return (
-        <div>
+        <div className='sticky-top'>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container className='header-style' >
                     <Link to={'/home'}>Home</Link>

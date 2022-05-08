@@ -14,7 +14,7 @@ import MyItems from './containers/MyItems/MyItems';
 import RequireAuth from './containers/Login/RequireAuth/RequireAuth';
 function App() {
   return (
-    <div className='bg-success'>
+    <div className='bg-danger'>
       <Header></Header>
       <Routes>
         <Route path='/home' element={<Home></Home>}></Route>
@@ -25,7 +25,11 @@ function App() {
             <ManageInventories></ManageInventories>
           </RequireAuth>}>
         </Route>
-        <Route path='/addItem' element={<AddItem></AddItem>}></Route>
+        <Route path='/addItem' element={
+          <RequireAuth>
+            <AddItem></AddItem>
+          </RequireAuth>}>
+        </Route>
         <Route path='/myItems' element={
           <RequireAuth>
             <MyItems></MyItems>
