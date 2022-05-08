@@ -1,0 +1,11 @@
+.item-delete:hover {
+    background-color: green;
+}
+.single-product img{
+    height: 250px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+}

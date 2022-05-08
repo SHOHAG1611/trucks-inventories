@@ -12,7 +12,7 @@ const ManageAllProducts = () => {
     })
     return (
         <div>
-            <div>
+            <div className='trucks-container'>
                 {
                     products.map(product=><AllProduct key={product._id} product={product}></AllProduct>)
                 }

@@ -9,6 +9,8 @@ import ManageInventories from './containers/ManageInventories/ManageInventories'
 import Footer from './containers/Shared/Footer/Footer';
 import Header from './containers/Shared/Header/Header';
 import PageNotFound from './containers/Shared/PageNotFound/PageNotFound';
+import AddItem from './containers/AddItem/AddItem';
+import MyItems from './containers/MyItems/MyItems';
 function App() {
   return (
     <div className='bg-success'>
@@ -18,6 +20,8 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/details' element={<Details></Details>}></Route>
         <Route path='manageInventories' element={<ManageInventories></ManageInventories>}></Route>
+        <Route path='/addItem' element={<AddItem></AddItem>}></Route>
+        <Route path='/myItems'element={<MyItems></MyItems>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
