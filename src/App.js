@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Blogs from './containers/Blogs/Blogs';
-import Details from './containers/Details/Details';
+// import Details from './containers/Details/Details';
 import Home from './containers/Home/Home/Home';
 import Login from './containers/Login/Login/Login';
 import Register from './containers/Login/Register/Register';
@@ -12,14 +12,17 @@ import PageNotFound from './containers/Shared/PageNotFound/PageNotFound';
 import AddItem from './containers/AddItem/AddItem';
 import MyItems from './containers/MyItems/MyItems';
 import RequireAuth from './containers/Login/RequireAuth/RequireAuth';
+import ItemDeteils from './containers/ItemDeteils/ItemDeteils';
 function App() {
   return (
-    <div className='bg-danger'>
+    <div className=''>
       <Header></Header>
       <Routes>
-        <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/details' element={<Details></Details>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='home/details/:detailId' element={
+            <ItemDeteils></ItemDeteils>
+        }></Route>
         <Route path='manageInventories' element={
           <RequireAuth>
             <ManageInventories></ManageInventories>

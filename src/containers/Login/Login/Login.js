@@ -69,20 +69,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-// {/* <form onSubmit={submitHandle}>
-// <label className='mb-2 ps-2' htmlFor="email">Email</label>
-// <br />
-// <input className='form-input' ref={emailUseRef} type="email" name="email" id="" placeholder='enter your email' required />
-// <br />
-// <label className='mb-2 ps-2' htmlFor="password">Password</label>
-// <br />
-// <input className='form-input' ref={passUseRef} type="password" name="" id="" placeholder='Password' required />
-// <br />
-// {errorMassage}
-// <p>create a acount <Link to='/register' onClick={goingToRegister} className='text-danger pe-auto text-decoration-none' >Please Register</Link></p>
-// <p>Forget Password? <button to='/register' onClick={updatePass} className='btn btn-outline-primary text-danger pe-auto' >Please Reset</button></p>
-// <input className='btn btn-primary mt-2 mx-auto w-100 rounded-pill' type="submit" value="Login" />
-// <Google></Google>
-// </form> */}

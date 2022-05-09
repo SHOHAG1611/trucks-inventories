@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {useParams } from 'react-router-dom';
+import './Details.css'
 
 const Details = () => {
+    const params=useParams()
     return (
         <div>
-                <h3>this is details </h3>
-
-                <Link to='/manageInventories'><button className='btn btn-primary text-center'>Manage Inventories</button></Link>
+            <h3>this is details:{params.detailId} </h3>
         </div>
     );
 };

@@ -1,10 +1,15 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './HomeItem.css'
 
 const HomeItem = ({ product }) => {
-    const { name, body, img, price, quantity, sName } = product;
+    const { name, body, img, price, quantity, sName,_id } = product;
+    const navigate = useNavigate()
+    const singleDetels=()=>{
+        const path=`details/${_id}`
+         navigate(path)
+    }
     return (
         <div className='container text-center'>
             <Card className='single-truck shadow p-3 mb-5 bg-body rounded'>
@@ -16,7 +21,7 @@ const HomeItem = ({ product }) => {
                 <Card.Text>{body}</Card.Text>
                 <Card.Text>{sName}</Card.Text> 
                 </Card.Body>
-                <Link to='/details'><button style={{width:'100%'}} className='btn btn-primary details-btn'>Update</button></Link>
+                <button onClick={singleDetels} style={{width:'100%'}} className='btn btn-primary details-btn'>Update</button>
             </Card >
         </div>
     );
