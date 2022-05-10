@@ -4,7 +4,7 @@ import './AboutStock.css'
 
 const AboutStock = () => {
     return (
-        <div className='container mt-5 mb-5 text-white'>
+        <div className='container mt-5 mb-5'>
             <div>
                 <h1 className='text-center'>Our Stocks</h1>
             </div>

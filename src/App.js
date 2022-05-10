@@ -15,13 +15,15 @@ import RequireAuth from './containers/Login/RequireAuth/RequireAuth';
 import ItemDeteils from './containers/ItemDeteils/ItemDeteils';
 function App() {
   return (
-    <div className=''>
+    <div className='bg-success'>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='home/details/:detailId' element={
+        <Route path='truck/:detailId' element={
+          <RequireAuth>
             <ItemDeteils></ItemDeteils>
+          </RequireAuth>
         }></Route>
         <Route path='manageInventories' element={
           <RequireAuth>

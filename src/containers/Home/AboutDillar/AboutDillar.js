@@ -3,7 +3,7 @@ import Dillar from '../../img/AboutDillar/maneger.jpg'
 
 const AboutDillar = () => {
     return (
-        <div className='container mt-5 mb-5 text-white'>
+        <div className='container mt-5 mb-5'>
             <div>
                 <h1 className='text-center'>Company Provider</h1>
             </div>
