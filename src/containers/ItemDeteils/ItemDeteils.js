@@ -19,22 +19,26 @@ const ItemDeteils = () => {
         console.log(numbers)
     }
     return (
-        <div>
+        <div style={{
+            backgroundImage: `url("https://www.pngmagic.com/product_images/single-color-background.jpg")`,
+            backgroundPosition:'center'
+        }}>
             <div className='container mx-auto text-center'>
                 <h1>Truck Name: {details.name}</h1>
                 <img style={{ width: '400px', height: '300px', border:'none',borderRadius:'15px'}} src={details.img} alt="" />
                 <h2>{details.body}</h2>
                 <h5>Quantity:{details.quantity}</h5>
+                <button className='minus-btn btn btn-danger'>Minus Quantity</button>
             </div>
             <div>
                 <form className='upgrade-quantity' onSubmit={handleAddQuantity}>
                     <input style={{ height: '50px', width: '200px', border: 'none', borderRadius: '10px' }} type="number" name="quantity" id="" placeholder='Upgrade Quantity' />
                     <br />
                     <br />
-                    <input type="submit" value="Add Quantity" />
+                    <input  className='btn btn-info text-center' type="submit" value="Add Quantity" />
                 </form>
             </div>
-            <Link style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '10px' }} to='/manageInventories'><button className='btn btn-primary text-center'>Manage Inventories</button></Link>
+            <Link className='manageInventories-btn' to='/manageInventories'> Manage Inventories</Link>
         </div>
     );
 };
