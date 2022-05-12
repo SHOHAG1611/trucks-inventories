@@ -9,4 +9,6 @@
 }
 .single-truck .details-btn:hover{
     background-color: green;
+    border: none;
+    border-radius: 15px;
 }

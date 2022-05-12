@@ -15,7 +15,7 @@ import RequireAuth from './containers/Login/RequireAuth/RequireAuth';
 import ItemDeteils from './containers/ItemDeteils/ItemDeteils';
 function App() {
   return (
-    <div className='bg-success'>
+    <div style={{backgroundColor:'#778899'}}>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
