@@ -26,15 +26,4 @@ const HomeItem = ({ product }) => {
         </div>
     );
 };
-
 export default HomeItem;
-
-
-/* 
-
-    const navigate = useNavigate();
-
-    const navigateToServiceDetail = id =>{
-        navigate(`/service/${id}`);
-    }
-*/

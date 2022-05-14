@@ -1,7 +1,6 @@
 .header-style {
     padding: 20px;
 }
-
 .header-style a {
     font-size: 30px;
     text-decoration: none;
@@ -10,7 +9,6 @@
     color: rgb(51, 216, 161);
     cursor: pointer;
 }
-
 .header-style a:hover {
     color: yellow;
 }

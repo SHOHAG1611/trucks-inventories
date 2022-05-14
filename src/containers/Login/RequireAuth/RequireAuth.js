@@ -6,7 +6,7 @@ import auth from '../../../firebase.init';
 const RequireAuth = ({ children }) => {
     const [user, loading] = useAuthState(auth);
     const location = useLocation();
-    // reload problem solved.
+    // reload problem and add loading sppiner
     if (loading) {
         return <div>
             <h1 className='text-center'><div class="d-flex justify-content-center">

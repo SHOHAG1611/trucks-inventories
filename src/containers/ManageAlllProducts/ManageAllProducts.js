@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AllProduct from '../AllProducts/AllProduct';
 import './ManageAllProducts.css'
-// import ManageInventories from '../ManageInventories/ManageInventories'
 
 const ManageAllProducts = () => {
 
