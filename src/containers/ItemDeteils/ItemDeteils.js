@@ -74,7 +74,7 @@ const ItemDeteils = () => {
             </div>
             <div>
                 <form className='upgrade-quantity' onSubmit={handleAddQuantity}>
-                    <input style={{ height: '50px', width: '200px', border: 'none', borderRadius: '10px' }} type="number" name="quantity" id="" placeholder='Upgrade Quantity' />
+                    <input style={{ height: '50px', width: '200px', border: 'none', borderRadius: '10px' }} type="number" name="quantity" id="" placeholder='Upgrade Quantity' required/>
                     <br />
                     <br />
                     <input className='btn btn-info text-center' type="submit" value="Add Quantity" />

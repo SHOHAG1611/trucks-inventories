@@ -1,7 +1,11 @@
 import React from 'react';
-import './AddItem.css'
+import './AddItem.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+
 
 const AddItem = () => {
+    const [user]= useAuthState(auth);
     const handleAddToDb = event => {
         event.preventDefault();
         const sure = window.confirm('are you sure to add this truck?')
@@ -12,7 +16,7 @@ const AddItem = () => {
             const quantity = event.target.quantity.value;
             const sName = event.target.sName.value;
             const body = event.target.body.value;
-            const email = event.target.email.value;
+            const email = user.email
             const item = { name, img, price, quantity, sName, body, email }
             const url = `https://fathomless-crag-24672.herokuapp.com/truck`
             fetch(url, {
@@ -39,9 +43,9 @@ const AddItem = () => {
                     <input className='add-input' type="text" name='img' placeholder='Image Url' required />
                     <input className='add-input' type="number" name="price" id="" placeholder='Enter Price' required />
                     <input className='add-input' type="number" name="quantity" id="" placeholder='Quantity' required />
-                    <input className='add-input' type="text" name='sName' placeholder='Supplier Name' required />
+                    <input className='add-input' type="text" name='sName' placeholder='Suppplier Name' required />
                     <textarea className='add-input' name="body" id="" cols="48" rows="3" placeholder='Add Description' required></textarea>
-                    <input className='add-input' type="email" name="email" id="" placeholder='Enter Your Email' required />
+                    <input className='add-input' type="email" name="email" id="" placeholder={user.email} readOnly />
                     <input className='btn btn-primary' type="submit" value="Add" />
                 </form>
             </div>
