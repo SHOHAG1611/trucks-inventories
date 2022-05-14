@@ -7,7 +7,7 @@ const ItemDeteils = () => {
     const [details, setDetails] = useState({})
     // load single truck details
     useEffect(() => {
-        const url = `http://localhost:5000/truck/${detailId}`;
+        const url = `https://fathomless-crag-24672.herokuapp.com/truck/${detailId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setDetails(data))
@@ -21,9 +21,9 @@ const ItemDeteils = () => {
             const newQuantity = parseInt(event.target.quantity.value);
             const totalQuantity = parseInt(details.quantity) + newQuantity;
             console.log(totalQuantity)
-            const newUpdateQuantity = {totalQuantity }
+            const newUpdateQuantity = { totalQuantity }
 
-            const url = `http://localhost:5000/truck/${detailId}`;
+            const url = `https://fathomless-crag-24672.herokuapp.com/truck/${detailId}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -39,32 +39,26 @@ const ItemDeteils = () => {
         }
 
     }
-
-    // update quantity
-    // const handleAddQuantity = event => {
-    //     event.preventDefault();
-    //     const prosid = window.confirm('are you sure ?');
-    //     if (prosid) {
-    //         const oldQuantity = parseInt(event.target.quantity.value);
-    //         const totalQuantity = parseInt(details.quantity) + oldQuantity;
-    //         const newQuantity = { totalQuantity };
-    //         console.log(totalQuantity)
-    //         const url = `http://localhost:5000/truck/${detailId}`;
-    //         fetch(url, {
-    //             method: 'PUT',
-    //             headers: {
-    //                 'content-type': 'application/json'
-    //             },
-    //             body: JSON.stringify(newQuantity),
-    //         })
-    //             .then(res => res.json())
-    //             .then(data => {
-    //                 console.log('success', data);
-    //                 event.target.reset();
-    //             })
-    //     }
-    // }
-
+    // delivered item quantity
+    const handleDeliveredProduct = () => {
+        const sure = window.confirm('are you sure to stock out one item')
+        if (details.quantity > 0 && sure) {
+            const totalQuantity = parseInt(details.quantity) - 1;
+            const newUpdateQuantity = { totalQuantity };
+            const url = `https://fathomless-crag-24672.herokuapp.com/truck/${detailId}`;
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(newUpdateQuantity),
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                })
+        }
+    }
 
     return (
         <div style={{
@@ -76,7 +70,7 @@ const ItemDeteils = () => {
                 <img style={{ width: '400px', height: '300px', border: 'none', borderRadius: '15px' }} src={details.img} alt="" />
                 <h2>{details.body}</h2>
                 <h5>Quantity:{details.quantity}</h5>
-                <button className='minus-btn btn btn-danger'>Minus Quantity</button>
+                <button onClick={handleDeliveredProduct} className='minus-btn btn btn-danger'>Minus Quantity</button>
             </div>
             <div>
                 <form className='upgrade-quantity' onSubmit={handleAddQuantity}>

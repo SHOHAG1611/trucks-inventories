@@ -8,7 +8,7 @@ const AllProduct = ({ product }) => {
     const deleteTruck=id=>{
         const sure=window.confirm('are you sure to stock our this item')
         if(sure){
-            const url=`http://localhost:5000/truck/${id}`
+            const url=`https://fathomless-crag-24672.herokuapp.com/truck/${id}`
             fetch(url,{
                 method:'DELETE'
             })

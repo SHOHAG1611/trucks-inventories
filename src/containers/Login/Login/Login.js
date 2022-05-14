@@ -51,7 +51,7 @@ const Login = () => {
         <div>
             <form onSubmit={submitHandle} style={{
                 backgroundImage: `url("https://css-tricks.com/wp-content/uploads/2018/08/vector.png")`
-            }} className='login-form text-center mt-5 mx-auto bg-info'>
+            }} className='login-form text-center mt-5 mx-auto'>
                 <input type="email" ref={emailUseRef} name="email" placeholder='Enter Your Email' required />
                 <br />
                 <input type="password" name="password" ref={passUseRef} placeholder='Password' required />
